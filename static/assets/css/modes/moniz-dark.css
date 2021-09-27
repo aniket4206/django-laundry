@@ -1,0 +1,203 @@
+/*--------------------------------------------------------------
+# Dark Mode
+--------------------------------------------------------------*/
+
+body,
+.comment-form__input-box input[type="text"],
+.comment-form__input-box input[type="email"],
+.comment-form__input-box textarea,
+.blog-sidebar__meta li a,
+.error-page__form button[type="submit"],
+.sidebar__post-content h3 a,
+.sidebar__category-list li a,
+.blog-details__social-list span,
+.blog-details__tags span,
+.blog-details__tags a,
+.blog-one__meta li a {
+	color: #9e9ea7;
+}
+
+.welcome-one__solutions-single,
+.counters-one__box,
+.faq-one-accrodion .accrodion,
+.web-solutions__box .tab-btns .tab-btn span,
+.services-one__single,
+.two-boxes__arrow a,
+.service-details__need-help,
+.service-details__sidebar-category,
+.blog-two__left,
+.sidebar__tags-list a,
+.sidebar__comments-icon,
+.get-in-touch__locations-carousel.owl-carousel .owl-dots .owl-dot,
+.services-one__icon:not(.services-one__icon:hover),
+.page-wrapper {
+	background-color: #17171a;
+}
+
+.testimonial-one__img-holder::before {
+	background-color: rgba(23, 23, 26, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.portfolio-filter.style1 li .count,
+.portfolio-filter.style1 li:hover .filter-text,
+.portfolio-filter.style1 li.active .filter-text,
+.counter-one__single h3,
+.two-boxes__text p,
+.two-boxes__arrow a,
+.reasons-one__text,
+.areas-of-practice__title h3,
+.web-solutions__box .tab-btns .tab-btn span,
+.welcome-one__right-text-1,
+.faq-one-accrodion .accrodion .accrodion-title h4,
+.faq-one-accrodion .accrodion-title h4::before,
+.faq-one-accrodion .accrodion.active .accrodion-title h4,
+.welcome-one__solutions-text-box p,
+.blog-one__title a,
+.services-one__icon,
+.services-one__title a,
+.web-solutions__content-list li .text p,
+.team-one__member-name,
+.testimonial-one__clinet-title,
+.team-one__social a,
+.service-details__icon-box span,
+.service-details__title,
+.reasons__list li .text p,
+.blog-sidebar__title a,
+.portfolio-detail__pagination li a,
+.blog-sidebar__read-more-btn a,
+.blog-sidebar__delivering-services-title a,
+.sidebar__post-list li:hover .sidebar__post-content h3 a,
+.service-details__title,
+.blog-details__pagenation li,
+.comment-one__title,
+.comment-form__title,
+.comment-one__content h3,
+.section-title__title {
+	color: #fff;
+}
+
+.services-one,
+.we-change,
+.services-one-bg,
+.web-solutions,
+.web-solutions-bg,
+.build-business__left-bg,
+.build-business__icon,
+.two-boxes__single,
+.service-one__arrow,
+.reasons-one-img-box-bg,
+.brand-one,
+.web-solutions__trusted,
+.blog-one__content,
+.areas-of-practice__single,
+.service-details,
+.team-one__social,
+.blog-two__right-bg,
+.get-in-touch__img-shape-2,
+.blog-details__tags a,
+.faqs-page-bg,
+.sidebar__comments,
+.faqs-page,
+.comment-form__input-box input[type="text"],
+.comment-form__input-box input[type="email"],
+.comment-form__input-box textarea,
+.error-page__form input[type="search"],
+.blog-sidebar__bottom-box,
+.blog-sidebar__delivering-services,
+.get-in-touch__locations-single,
+.sidebar__post,
+.sidebar__category,
+.blog-details__pagenation li,
+.sidebar__tags,
+.welcome-one__trusted {
+	background-color: #1e1e22;
+}
+
+.welcome-one__trusted {
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.07);
+
+}
+
+.counters-one__box,
+.faq-one-accrodion .accrodion.active .accrodion-title,
+.welcome-one__solutions-single,
+.reasons-one__icon-box li,
+.blog-one__bottom,
+.build-business__mission,
+.brand-one,
+.blog-details__bottom,
+.comment-one__single,
+.portfolio-detail__pagination-box,
+.welcome-one__trusted::before {
+	border-color: #2f2f33;
+}
+
+.counter-one__single::before {
+	background-color: #2f2f33;
+}
+
+.welcome-one__solutions-single:hover {
+	border-color: transparent;
+}
+
+.counter-one__text,
+.testimonial-one__text,
+.service-details__sidebar-category-list li a,
+.portfolio-filter.style1 li .filter-text,
+.section-title__tagline {
+	color: #9e9ea7;
+}
+
+
+.faq-one-accrodion .accrodion-title.active h4::before {
+	color: var(--moniz-base, #fc653c);
+}
+
+.faqs-page-bg,
+.services-one-bg {
+	opacity: 0.04;
+	background-blend-mode: soft-light;
+}
+
+.web-solutions-bg {
+	opacity: 0;
+}
+
+#similar-work-pagination .swiper-pagination-bullet,
+#testimonials-one__carousel-pagination .swiper-pagination-bullet {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#similar-work-pagination .swiper-pagination-bullet-active,
+.get-in-touch__locations-carousel.owl-carousel .owl-dots .owl-dot.active,
+#testimonials-one__carousel-pagination .swiper-pagination-bullet-active {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.brand-border-top {
+	border-top: 0;
+}
+
+#similar-work-pagination {
+	background-color: transparent;
+}
+
+.style-switcher {
+	background-color: #1e1e22 !important;
+}
+
+.style-switcher .layout-feature button,
+.style-switcher .layout-feature a,
+.style-switcher .language-feature button {
+	background-color: #17171a !important;
+}
+
+.style-switcher h3 {
+	color: #fff !important;
+}

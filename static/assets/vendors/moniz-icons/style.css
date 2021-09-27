@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?f3u5hc');
+  src:  url('fonts/icomoon.eot?f3u5hc#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?f3u5hc') format('truetype'),
+    url('fonts/icomoon.woff?f3u5hc') format('woff'),
+    url('fonts/icomoon.svg?f3u5hc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-placeholder:before {
+  content: "\e900";
+}
+.icon-relationship:before {
+  content: "\e901";
+}
+.icon-magnifying-glass:before {
+  content: "\e902";
+}
+.icon-phone-call:before {
+  content: "\e903";
+}
+.icon-right-arrow:before {
+  content: "\e904";
+}
+.icon-left-arrow:before {
+  content: "\e905";
+}
+.icon-tick:before {
+  content: "\e906";
+}
+.icon-recommend:before {
+  content: "\e907";
+}
+.icon-recruit:before {
+  content: "\e908";
+}
+.icon-coffee:before {
+  content: "\e909";
+}
+.icon-customer-review:before {
+  content: "\e90a";
+}
+.icon-development:before {
+  content: "\e90b";
+}
+.icon-color-sample:before {
+  content: "\e90c";
+}
+.icon-front-end:before {
+  content: "\e90d";
+}
+.icon-online-shopping:before {
+  content: "\e90e";
+}
+.icon-web-design:before {
+  content: "\e90f";
+}
+.icon-graphic-design:before {
+  content: "\e910";
+}
+.icon-play-button:before {
+  content: "\e911";
+}
+.icon-training:before {
+  content: "\e912";
+}
+.icon-strategy:before {
+  content: "\e913";
+}
