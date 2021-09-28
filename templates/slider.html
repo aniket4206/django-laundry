@@ -1,0 +1,55 @@
+{% load static %}
+
+		<section class="main-slider" id="home">
+			<div class="swiper-container thm-swiper__slider" data-swiper-options='{"slidesPerView": 1, "loop": true,
+    "effect": "fade",
+     "pagination": {
+        "el": "#main-slider-pagination",
+        "type": "bullets",
+        "clickable": true
+      },
+    "navigation": {
+        "nextEl": "#main-slider__swiper-button-next",
+        "prevEl": "#main-slider__swiper-button-prev"
+    },
+    "autoplay": {
+        "delay": 5000
+    }}'>
+				<div class="swiper-wrapper">
+                {% for object in obj %}
+					<div class="swiper-slide {% if for.counter0 == 0%}{% endif %}">
+						<div class="image-layer"
+							style="background-image: url({{object.image.url}});">
+						</div>
+
+						
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="main-slider__content">
+										<p>{{object.sub_title}}</p>
+										<h2>{{object.title}}</h2>
+										<!-- <a href="contact.html" class="thm-btn"><span>Free consultation</span></a> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    {% endfor %}
+					
+				<!-- If we need navigation buttons -->
+				<div class="slider-bottom-box clearfix">
+
+					<div class="main-slider__nav">
+						<div class="swiper-button-prev" id="main-slider__swiper-button-next"><i
+								class="icon-right-arrow icon-left-arrow"></i>
+						</div>
+						<div class="swiper-button-next" id="main-slider__swiper-button-prev"><i
+								class="icon-right-arrow"></i>
+						</div>
+					</div>
+					<div class="swiper-pagination" id="main-slider-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<!--Banner One End-->
