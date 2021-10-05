@@ -1,8 +1,143 @@
 {% extends 'base.html' %}
 
-{% block content1 %}
-<div>
-    <h1>Hello world</h1>
-</div>
+{% block content %}
+
+<section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'shinelaundry' %}">Home</a></li>
+                        <li><span>.</span></li>
+                        <li>Contact</li>
+                    </ul>
+                    <h2>Contact</h2>
+                </div>
+            </div>
+        </section>
+
+
+<section class="get-in-touch" id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6">
+						<div class="get-in-touch__right">
+							<div class="section-title text-left">
+								<span class="section-title__tagline">Contact with us</span>
+								<h2 class="section-title__title">Get in touch with the Shine Laundry..</h2>
+							</div>
+							<div class="get-in-touch__locations">
+								<div class="row">
+									<div class="col-xl-6 col-lg-6 col-md-6">
+										<div class="get-in-touch__locations-left">
+											<p class="get-in-touch__locations-text"><li><ul>We deliver your serviced clothes in just 2 days of booking us!!!</ul>
+												<ul>Quality work at perfect time</ul>
+												<ul>Lesson your burden and connect to us</ul>
+
+											</li>
+											</p>
+											
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="get-in-touch__locations-right">
+											<div class="get-in-touch__locations-carousel owl-theme owl-carousel">
+												<div class="get-in-touch__locations-single">
+													<div class="get-in-touch__locations-top">
+														<div class="get-in-touch__locations-icon">
+															<i class="icon-placeholder"></i>
+														</div>
+														<div class="get-in-touch__locations-title">
+															<h4>Shine Laundry</h4>
+														</div>
+													</div>
+													{% for object4 in obj4 %}
+													<div class="get-in-touch__locations-bottom">
+														<p class="get-in-touch__locations-bottom-tagline">{{object4.address}}
+														</p>
+														<h3>
+															<a href="mailto:needhelp@moniz.com"
+																class="get-in-touch__locations-mail">{{object4.email_id}}</a>
+															<a href="tel:91-{{object4.contact_number}}"
+																class="get-in-touch__locations-phone">{{object4.contact_number}}</a>
+														</h3>
+													</div>
+												</div>
+												<div class="get-in-touch__locations-single">
+													<div class="get-in-touch__locations-top">
+														<div class="get-in-touch__locations-icon">
+															<i class="icon-placeholder"></i>
+														</div>
+														<div class="get-in-touch__locations-title">
+															<h4>Shine Laundry</h4>
+														</div>
+													</div>
+													<div class="get-in-touch__locations-bottom">
+														<p class="get-in-touch__locations-bottom-tagline">{{object4.address}}</p>
+														<h3>
+															<a href="mailto:{{object4.email_id}}"
+																class="get-in-touch__locations-mail">{{object4.email_id}}</a>
+															<a href="tel:91-{{object4.contact_number}}"
+																class="get-in-touch__locations-phone">{{object4.contact_number}}</a>
+														</h3>
+													</div>
+												</div>
+											</div>{% endfor %}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-6">
+						<div class="contact-page__form contact-page__form--one-page">
+							<form action="#" class="comment-one__form contact-form-validated"
+								novalidate="novalidate">
+								<div class="row">
+									<div class="col-xl-6">
+										<br><div class="comment-form__input-box">
+											<input type="text" placeholder="Your name" name="name" required="">
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<br><div class="comment-form__input-box">
+											<input type="email" placeholder="Email Address" name="email" required="">
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="comment-form__input-box">
+											<input type="text" placeholder="Phone number" name="phone" required="">
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="comment-form__input-box">
+											<input type="text" placeholder="Subject" name="Subject" required="">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xl-12">
+										<div class="comment-form__input-box">
+											<textarea name="message" placeholder="Write Message" required=""></textarea>
+										</div>
+										<button type="submit" class="thm-btn"><span>Send a
+												message</span></button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <section class="contact-page-google-map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.549350017768!2d74.4549264139989!3d19.474987186860297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcf1cdb8f3fccd%3A0x8dea8600274ed73f!2sNimbhere%20School!5e0!3m2!1sen!2sin!4v1629431653526!5m2!1sen!2sin"
+				class="contact-page-google-map__box one-page-map" allowfullscreen></iframe>
+		</section>
+
+
 {% endblock  %}
 

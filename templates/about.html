@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+
+{% block content  %}
+
+<section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'shinelaundry' %}">Home</a></li>
+                        <li><span>.</span></li>
+                        <li>About us</li>
+                    </ul>
+                    <h2>About us</h2>
+                </div>
+            </div>
+        </section>
+
+{% load static %}
+		<section class="welcome-one" id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6">
+						<div class="welcome-one__left wow fadeInLeft" data-wow-duration="1500ms">
+							<div class="welcome-one__img-box">
+								<div class="welcome-one__img">
+									<img src="{% static 'assets/images/resources/welcome-one-img-1.png' %}" alt="">
+									<div class="welcome-one__shape-1"></div>
+									<div class="welcome-one__shape-2"></div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				
+					<div class="col-xl-6">
+						<div class="welcome-one__right">
+							<div class="section-title text-left">
+								<span class="section-title__tagline">About company</span>
+								<h2 class="section-title__title">We provide the best Laundry services</h2>
+							</div>
+							<div class="welcome-one__solutions">
+								<div class="welcome-one__solutions-single">
+									<div class="welcome-one__solutions-icon">
+										<span class="icon-tick"></span>
+									</div>
+									<div class="welcome-one__solutions-text-box">
+										<p>First Class Cleaning Service</p>
+									</div>
+								</div>
+								<div class="welcome-one__solutions-single">
+									<div class="welcome-one__solutions-icon">
+										<span class="icon-tick"></span>
+									</div>
+									<div class="welcome-one__solutions-text-box">
+										<p>A Personal and Professional Cleaning</p>
+									</div>
+								</div>
+							</div>
+							<p class="welcome-one__right-text-1">As the generations change, the mindset of the evolving manpower also changes,
+So how can manual efforts that are taken to clean clothes be replaced?</p>
+							<p class="welcome-one__right-text-2">The perfect solution is here,
+One & only “Shine Laundry”
+Ab Shine laundry se shine karwaiye apne kapde!
+</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	{% endblock   %}

@@ -2,6 +2,7 @@
 {% block content %}
 <!-- /.language-feature -->
 		{% load static %}
+		{% include 'slider.html' %}
 		<!-- vision mission -->
 		<section class="welcome-one" id="vision">
 			<div class="container">
@@ -128,43 +129,22 @@ Ab Shine laundry se shine karwaiye apne kapde!
 							<p>we are a laundry company that focuses more on using machines and less human labour,In our processes of cleaning,we use different electric machine for each different work. </p>
 						</div>
 						<div class="row">
+						{% for object1 in obj1 %}
 							<div class="col-xl-4 col-lg-4">
+							   {% load staticfiles %}
 								<!--Services One Single-->
 								<div class="services-one__single wow fadeInUp" data-wow-delay="100ms">
-{% load static %}									<div class="services-one__icon">
-										<img src="{% static 'assets/images/washing-machine.png' %}" alt="" height="92" width="92">
+									<div class="services-one__icon">
+										<img src="{{object1.image.url}}" height="92" width="92">
 									</div>
-									<h3 class="services-one__title"><a href="website-design.html">Washing</a></h3>
-									<p class="services-one__text">  Are you tired of washing so many clothes?get irrited for hours to dry your clothes?</p>
+									<h3 class="services-one__title"><a href="#">{{object1.title}}</a></h3>
+									<p class="services-one__text"> {{object1.info}} </p>
 										
 								</div> 
-								
-								
+
 							</div>
-							<div class="col-xl-4 col-lg-4">
-								<!--Services One Single-->
-								<div class="services-one__single wow fadeInUp" data-wow-delay="100ms">
-									<div class="services-one__icon">
-										<img src="{% static 'assets/images/drying-machine.png' %}" alt="" height="92" width="92">
-									</div>
-									<h3 class="services-one__title"><a href="web-development.html">DryCleaning</a></h3>
-									<p class="services-one__text">Do you have a high brand Lehenga/Sherwani that needs to be dry cleaned safely?</p>
-								
-								</div> 
-									
-							</div>
-							<div class="col-xl-4 col-lg-4">
-								<!--Services One Single-->
-								<div class="services-one__single wow fadeInUp" data-wow-delay="100ms">
-									<div class="services-one__icon">
-										<img src="{% static 'assets/images/92.jpg' %}" alt="" height="92" width="92">
-									</div>
-									<h3 class="services-one__title"><a href="web-application.html">Ironing</a></h3>
-									<p class="services-one__text">Wanna look smart with the 'Oh so nicely clean and ironed clothes'??</p>
-									
+						{% endfor %}
 		
-								</div> 
-							</div>
 						</div>
 					</div>
 					<h5><center><ul>If your answer to all the above question is 'yes',<ul>
@@ -183,11 +163,12 @@ Ab Shine laundry se shine karwaiye apne kapde!
 				</div>
 				
 				<div class="row filter-layout masonary-layout">
+				{% for object3 in obj3 %}
 					<div class="col-xl-3 col-lg-6 col-md-6 filter-item bra illus web photo">
 						<!--Portfolio One Single-->
 						<div class="portfolio-one__single wow fadeInUp" data-wow-delay="100ms">
 							<div class="portfolio-one__img">
-								<img src="{% static 'assets/images/demo4.jpg' %}" alt="" height="426" width="370">
+								<img src="{{object3.image.url}}" alt="" height="426" width="370">
 								
 								<div class="portfolio-one__arrow">
 									<span class="icon-right-arrow"></span></a>
@@ -199,7 +180,7 @@ Ab Shine laundry se shine karwaiye apne kapde!
 						<!--Portfolio One Single-->
 						<div class="portfolio-one__single wow fadeInUp" data-wow-delay="200ms">
 							<div class="portfolio-one__img">
-								<img src="{% static 'assets/images/demo3.jpg' %}" alt=""  height="426" width="370">
+								<img src="{{object3.image1.url}}" alt=""  height="426" width="370">
 								
 								<div class="portfolio-one__arrow">
 									<span class="icon-right-arrow"></span></a>
@@ -211,7 +192,7 @@ Ab Shine laundry se shine karwaiye apne kapde!
 						<!--Portfolio One Single-->
 						<div class="portfolio-one__single mar-b-0 margin-bottom-30 wow fadeInUp" data-wow-delay="300ms">
 							<div class="portfolio-one__img">
-								<img src="{% static 'assets/images/demo1.jpg' %}" alt=""  height="426" width="370">
+								<img src="{{object3.image2.url}}" alt=""  height="426" width="370">
 								
 								<div class="portfolio-one__arrow">
 									<span class="icon-right-arrow"></span></a>
@@ -223,7 +204,7 @@ Ab Shine laundry se shine karwaiye apne kapde!
 						<!--Portfolio One Single-->
 						<div class="portfolio-one__single mar-b-0 wow fadeInUp" data-wow-delay="400ms">
 							<div class="portfolio-one__img">
-								<img src="{% static 'assets/images/demo2.jpg' %}" alt=""  height="426" width="370">
+								<img src="{{object3.image3.url}}" alt=""  height="426" width="370">
 								
 								<div class="portfolio-one__arrow">
 									<span class="icon-right-arrow"></span></a>
@@ -231,7 +212,7 @@ Ab Shine laundry se shine karwaiye apne kapde!
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>{% endfor %}
 			</div>
 		</section>					<!--Portfolio One Single-->
 						
@@ -244,9 +225,9 @@ Ab Shine laundry se shine karwaiye apne kapde!
 				<div class="row">
 					<div class="col-xl-4 col-lg-5">
 						<div class="testimonial-one__left">
-							<div class="section-title text-left">
+							<div class="section-title text-left">{% for object5 in obj5 %}
 								<span class="section-title__tagline">Customer demand</span>
-								<br><br><h2 class="section-title__title">Why Choose Us?</h2>
+								<br><br><h2 class="section-title__title">{{object5.title}}</h2>
 							</div>
 							<!-- <div class="testimonial-one__btn-box">
 								<a href="about.html" class="thm-btn testimonial-one__btn"><span>All feedbacks</span></a>
@@ -257,12 +238,12 @@ Ab Shine laundry se shine karwaiye apne kapde!
 					<div class="col-xl-8 col-lg-7">
 						<div class="testimonial-one__slider">
 
-
+						
 							<div class="swiper-container" id="testimonials-one__thumb">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<div class="testimonial-one__img-holder">
-											<img src="{% static 'assets/images/testimonial/testimonials-1-1.png' %}" alt="">
+											<img src="{{object5.image.url}}" alt="">
 											<div class="testimonial-one__quote">
 
 											</div>
@@ -270,7 +251,7 @@ Ab Shine laundry se shine karwaiye apne kapde!
 									</div><!-- /.swiper-slide -->
 									<div class="swiper-slide">
 										<div class="testimonial-one__img-holder">
-											<img src="{% static 'assets/images/testimonial/testimonials-1-2.png' %}" alt="">
+											<img src="{{object5.image1.url}}" alt="">
 											<div class="testimonial-one__quote">
 
 											</div>
@@ -278,7 +259,7 @@ Ab Shine laundry se shine karwaiye apne kapde!
 									</div><!-- /.swiper-slide -->
 									<div class="swiper-slide">
 										<div class="testimonial-one__img-holder">
-											<img src="{% static 'assets/images/testimonial/testimonials-1-3.png' %}" alt="">
+											<img src="{{object5.image2.url}}" alt="">
 											<div class="testimonial-one__quote">
 
 											</div>
@@ -292,22 +273,19 @@ Ab Shine laundry se shine karwaiye apne kapde!
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
 											<div class="testimonial-one__conent-box">
-												<p class="testimonial-one__text">We, as a laundry service providing company, are dedicated to cleaning, washing, ironing and ensuring
-careful and safe delivery of your clothes.</p>
+												<p class="testimonial-one__text">{{object5.info}}</p>
 												
 											</div>
 										</div><!-- /.swiper-slide -->
 										<div class="swiper-slide">
 											<div class="testimonial-one__conent-box">
-												<p class="testimonial-one__text">We believe in serving our customers with the best services in
-less time and at affordable rates.</p>
+												<p class="testimonial-one__text">{{object5.info1}}</p>
 												
 											</div>
 										</div><!-- /.swiper-slide -->
 										<div class="swiper-slide">
 											<div class="testimonial-one__conent-box">
-												<p class="testimonial-one__text">We tend to collaborate with our clients to assure the cleaning of their
-clothes and ensure the serviceability and delivery provided..</p>
+												<p class="testimonial-one__text">{{object5.info2}}</p>
 												
 											</div>
 										</div><!-- /.swiper-slide -->
@@ -318,7 +296,7 @@ clothes and ensure the serviceability and delivery provided..</p>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>{% endfor %}
 			</div>
 		</section>
 	
@@ -356,6 +334,7 @@ clothes and ensure the serviceability and delivery provided..</p>
 											
 										</div>
 									</div>
+									{% for object4 in obj4 %}
 									<div class="col-xl-6">
 										<div class="get-in-touch__locations-right">
 											<div class="get-in-touch__locations-carousel owl-theme owl-carousel">
@@ -369,14 +348,13 @@ clothes and ensure the serviceability and delivery provided..</p>
 														</div>
 													</div>
 													<div class="get-in-touch__locations-bottom">
-														<p class="get-in-touch__locations-bottom-tagline">Nashik
-															Tal Nashik
+														<p class="get-in-touch__locations-bottom-tagline">{{object4.address}}
 														</p>
 														<h3>
-															<a href="mailto:needhelp@moniz.com"
-																class="get-in-touch__locations-mail">needhelp@moniz.com</a>
-															<a href="tel:92-666-888-000"
-																class="get-in-touch__locations-phone">92 666 888 000</a>
+															<a href="mailto:{{object4.email_id}}"
+																class="get-in-touch__locations-mail">{{object4.email_id}}</a>
+															<a href="tel:91-{{object4.contact_number}}"
+																class="get-in-touch__locations-phone">{{object4.contact_number}}</a>
 														</h3>
 													</div>
 												</div>
@@ -390,20 +368,19 @@ clothes and ensure the serviceability and delivery provided..</p>
 														</div>
 													</div>
 													<div class="get-in-touch__locations-bottom">
-														<p class="get-in-touch__locations-bottom-tagline">Nashik
-															Tal Nashik</p>
+														<p class="get-in-touch__locations-bottom-tagline">{{object4.address}}</p>
 														<h3>
-															<a href="mailto:needhelp@moniz.com"
-																class="get-in-touch__locations-mail">needhelp@moniz.com</a>
-															<a href="tel:92-666-888-000"
-																class="get-in-touch__locations-phone">92 666 888 000</a>
+															<a href="mailto:{{object4.email_id}}"
+																class="get-in-touch__locations-mail">{{object4.email_id}}</a>
+															<a href="tel:91-{{object4.contact_number}}"
+																class="get-in-touch__locations-phone">{{object4.contact_number}}</a>
 														</h3>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</div>{% endfor %}
 							</div>
 						</div>
 					</div>
@@ -413,7 +390,7 @@ clothes and ensure the serviceability and delivery provided..</p>
 								novalidate="novalidate">
 								<div class="row">
 									<div class="col-xl-6">
-										<br><div class="comment-form__input-box">
+										<div class="comment-form__input-box">
 											<input type="text" placeholder="Your name" name="name" required="">
 										</div>
 									</div>

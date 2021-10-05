@@ -5,19 +5,19 @@
 					style="background-image: url({% static 'assets/images/backgrounds/site-footer-bg.jpg' %})"></div>
 				<div class="container">
 					<div class="row">
+					{% for object4 in obj4 %}
 						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
 							<div class="footer-widget__column footer-widget__about">
 								<!-- <div class="footer-widget__about-logo">
 									<a href="#"><img src="assets/images/resources/footer-logo.png" alt=""></a>
-								</div> -->
-								<p class="footer-widget__about-text">Welcome to our website ore ipsum
-									simply text amet cing elit.</p>
+								</div> -->{% for object6 in obj6 %}
+								<p class="footer-widget__about-text">{{object4.footer_desc}}</p>
 								<div class="footer-widget__about-social-list">
-									<a href="#"><i class="fab fa-twitter"></i></a>
-									<a href="#" class="clr-fb"><i class="fab fa-facebook"></i></a>
-									<a href="#" class="clr-dri"><i class="fab fa-pinterest-p"></i></a>
-									<a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a>
-								</div>
+									<a href="{{object6.twitter}}"><i class="fab fa-twitter"></i></a>
+									<a href="{{object6.facebook}}" class="clr-fb"><i class="fab fa-facebook"></i></a>
+									<a href="{{object6.printest}}" class="clr-dri"><i class="fab fa-pinterest-p"></i></a>
+									<a href="{{object6.instagram}}" class="clr-ins"><i class="fab fa-instagram"></i></a>
+								</div>{% endfor %}
 							</div>
 						</div>
 						<div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
@@ -26,23 +26,23 @@
 								<ul class="footer-widget__explore-list list-unstyled">
 						
 						
-									<li><a href="#">About</a></li>
-									<li><a href="#">Photo Gallery</a></li>
-									<li><a href="#">Vision Mission</a></li>
-									<li><a href="#">feedbacks</a></li>
-									<li><a href="#">Contact</a></li>
+									<li><a href="/about">About</a></li>
+									<li><a href="/portfolio">Photo Gallery</a></li>
+									<li><a href="/vision">Vision Mission</a></li>
+									<li><a href="/faq">feedbacks</a></li>
+									<li><a href="/contact">Contact</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
 							<div class="footer-widget__column footer-widget__contact">
 								<h3 class="footer-widget__title">Contact</h3>
-								<p class="footer-widget__contact-text">Nashik East Nagar</p>
+								<p class="footer-widget__contact-text">{{object4.address}}</p>
 								<div class="footer-widget__contact-info">
 									<p>
-										<a href="tel:91-982-209-9499" class="footer-widget__contact-phone"> 98 2209 9499</a>
-										<a href="mailto:needhelp@company.com"
-											class="footer-widget__contact-mail">needhelp@company.com</a>
+										<a href="tel:91-{{object4.contact_number}}" class="footer-widget__contact-phone">{{object4.contact_number}}</a>
+										<a href="mailto:{{object4.email_id}}"
+											class="footer-widget__contact-mail">{{object4.email_id}}</a>
 									</p>
 								</div>
 							</div>
@@ -50,9 +50,9 @@
 						<div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
 							<div class="footer-widget__column footer-widget__newsletter">
 								<h3 class="footer-widget__title">Sign up for newsletter</h3>
-								<form class="footer-widget__newsletter-form">
-									<div class="footer-widget__newsletter-input-box">
-										<input type="email" placeholder="Email Address" name="email">
+								<form class="footer-widget__newsletter-form" action="{% url 'shinelaundry' %}" method="POST">
+									<div class="footer-widget__newsletter-input-box">{% csrf_token %}
+										<input type="email" placeholder="Email Address" name="toemail">
 										<button type="submit" class="footer-widget__newsletter-btn"><i
 												class="fas fa-paper-plane"></i></button>
 									</div>
@@ -91,27 +91,27 @@
 			<!-- /.logo-box -->
 			<div class="mobile-nav__container"></div>
 			<!-- /.mobile-nav__container -->
-
+	
 			<ul class="mobile-nav__contact list-unstyled">
 				<li>
 					<i class="fa fa-envelope"></i>
-					<a href="mailto:needhelp@packageName__.com">aniket.sinu@gmail.com</a>
+					<a href="mailto:{{object4.email_id}}">{{object4.email_id}}</a>
 				</li>
 				<li>
 					<i class="fa fa-phone-alt"></i>
-					<a href="tel:982-209-9499">98 2209 9499</a>
+					<a href="tel:{{object4.contact_number}}">{{object4.contact_number}}</a>
 				</li>
 			</ul><!-- /.mobile-nav__contact -->
 			<div class="mobile-nav__top">
-				<div class="mobile-nav__social">
-					<a href="#" class="fab fa-twitter"></a>
-					<a href="#" class="fab fa-facebook-square"></a>
-					<a href="#" class="fab fa-pinterest-p"></a>
-					<a href="#" class="fab fa-instagram"></a>
+				<div class="mobile-nav__social">{% for object6 in obj6 %}
+					<a href="{{object6.twitter}}" class="fab fa-twitter"></a>
+					<a href="{{object6.facebook}}" class="fab fa-facebook-square"></a>
+					<a href="{{object6.printest}}" class="fab fa-pinterest-p"></a>
+					<a href="{{object6.instagram}}" class="fab fa-instagram"></a>
 				</div><!-- /.mobile-nav__social -->
 			</div><!-- /.mobile-nav__top -->
-
-
+{% endfor %}
+	{% endfor %}
 
 		</div>
 		<!-- /.mobile-nav__content -->
@@ -170,10 +170,10 @@
 	<script src="{% static 'assets/js/moniz.js' %}"></script>
 
 	<!-- color switcher language -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js"></script>
+	{% comment %} <script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js"></script> {% endcomment %}
 	<script src="{% static 'assets/js/jQuery.style.switcher.min.js' %}"></script>
 	<script src="{% static 'assets/js/lang.js' %}"></script>
-	<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	{% comment %} <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> {% endcomment %}
 	<script src="{% static 'assets/js/color-switcher.js' %}"></script>
 
 </body>

@@ -1,10 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
  <html lang="en"> 
-
 <head>
-
-
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Shine Laundry</title>
@@ -72,6 +69,7 @@
 		
 	</style>
 
+
 	  
 </head>
 
@@ -81,35 +79,24 @@
 		<header class="main-header clearfix">
 			<nav class="main-menu clearfix">
 				<div class="main-menu-wrapper clearfix">
-					<div class="main-menu-wrapper__left clearfix">
-						<div class="main-menu-wrapper__logo">
-							
-						</div>
-						<div class="main-menu-wrapper__search-box">
-							<a href="#" class="main-menu-wrapper__search search-toggler icon-magnifying-glass"></a>
-						</div>
-						<div class="main-menu-wrapper__social">
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#" class="clr-fb"><i class="fab fa-facebook"></i></a>
-							<a href="#" class="clr-dri"><i class="fab fa-pinterest-p"></i></a>
-							<a href="#" class="clr-ins"><i class="fab fa-instagram"></i></a>
-						</div>
-					</div>
+					  <div class="main-menu-two-wrapper__logo">
+                            <a href="index.html"><img src="{% static 'assets/images/resources/logo.png' %}" alt=""></a>
+                        </div>
 					<div class="main-menu-wrapper__main-menu">
 						<a href="#" class="mobile-nav__toggler">
 							<span></span>
 						</a>
 						<ul class="main-menu__list one-page-scroll-menu">
-							<li class="scrollToLink"><a href="#">Home</a></li>
-							<li class="scrollToLink"><a href="#vision">Vision</a></li>
-							<li class="scrollToLink"><a href="#about">About</a></li>
+							<li class="scrollToLink"><a href="/">Home</a></li>
+							<li class=""><a href="/vision">Vision</a></li>
+							<li class=""><a href="/about">About</a></li>
 
-							<li class="scrollToLink"><a href="#services">Services</a></li>
-							<li class="scrollToLink"><a href="#portfolio">Gallery</a></li>
-							<li class="scrollToLink"><a href="#testimonials">feedbacks</a></li>
+							<li class="scrollToLink"><a href="/services">Services</a></li>
+							<li class="scrollToLink"><a href="/portfolio">Gallery</a></li>
+							<li class="scrollToLink"><a href="/faq">feedbacks</a></li>
 							
 							
-							<li class="scrollToLink"><a href="#contact">Contact</a></li>
+							<li class=""><a href="/contact">Contact</a></li>
 						</ul>
 					</div>
 					<div class="main-menu-wrapper__right">
@@ -117,9 +104,11 @@
 							<div class="main-menu-wrapper__right-contact-icon">
 								<span class="icon-phone-call"></span>
 							</div>
+							{% for object4 in obj4 %}
 							<div class="main-menu-wrapper__right-contact-number">
-								<a href="tel:91-982-209-9499">98 2209 9499</a>
+								<a href="tel:91-{{object4.contact_number}}">{{object4.contact_number}}</a>
 							</div>
+							{% endfor %}
 						</div>
 					</div>
 				</div>

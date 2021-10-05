@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'shinelaundry' %}">Home</a></li>
+                        <li><span>.</span></li>
+                        <li>Gallery</li>
+                    </ul>
+                    <h2>Gallery</h2>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="portfolio-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <ul class="portfolio-filter style1 post-filter has-dynamic-filters-counter list-unstyled">
+                            <li data-filter=".filter-item" class="active"><span class="filter-text">All</span></li>
+                            <li data-filter=".bra"><span class="filter-text">Modern</span></li>
+                            <li data-filter=".illus"><span class="filter-text">Old</span></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="row filter-layout masonary-layout">
+				{% for object2 in obj2 %}
+                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item bra illus web">
+                        <!--Portfolio One Single-->
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__img">
+                                <img src="{{object2.image.url}}" alt="">
+                                <div class="portfolio-one__experience">
+                                    
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item bra photo web">
+                        <!--Portfolio One Single-->
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__img">
+                                <img src="{{object2.image1.url}}" alt="">
+                                <div class="portfolio-one__experience">
+                                   
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item illus photo">
+                        <!--Portfolio One Single-->
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__img">
+                                <img src="{{object2.image2.url}}" alt="">
+                                <div class="portfolio-one__experience">
+                                   
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div> 
+                    {% comment %} <div class="col-xl-4 col-lg-6 col-md-6 filter-item bra web">
+                        <!--Portfolio One Single-->
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__img">
+                                <img src="{{object2.image4.url}}" alt="">
+                                <div class="portfolio-one__experience">
+                                    <div class="portfolio-one__web-design">
+                                        <p class="portfolio-one__web-design-title">Web design</p>
+                                    </div>
+                                    <div class="portfolio-one__fimlor">
+                                        <p class="portfolio-one__fimlor-title"><a href="portfolio-detail.html">Fimlor
+                                                experience</a></p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-one__arrow">
+                                    <a href="portfolio-detail.html"><span class="icon-right-arrow"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% comment %} <div class="col-xl-4 col-lg-6 col-md-6 filter-item photo web">
+                        <!--Portfolio One Single-->
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__img">
+                                <img src="assets/images/resources/portfolio-page-5.jpg" alt="">
+                                <div class="portfolio-one__experience">
+                                    <div class="portfolio-one__web-design">
+                                        <p class="portfolio-one__web-design-title">Web design</p>
+                                    </div>
+                                    <div class="portfolio-one__fimlor">
+                                        <p class="portfolio-one__fimlor-title"><a href="portfolio-detail.html">Fimlor
+                                                experience</a></p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-one__arrow">
+                                    <a href="portfolio-detail.html"><span class="icon-right-arrow"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 filter-item illus photo web">
+                        <!--Portfolio One Single-->
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__img">
+                                <img src="assets/images/resources/portfolio-page-6.jpg" alt="">
+                                <div class="portfolio-one__experience">
+                                    <div class="portfolio-one__web-design">
+                                        <p class="portfolio-one__web-design-title">Web design</p>
+                                    </div>
+                                    <div class="portfolio-one__fimlor">
+                                        <p class="portfolio-one__fimlor-title"><a href="portfolio-detail.html">Fimlor
+                                                experience</a></p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-one__arrow">
+                                    <a href="portfolio-detail.html"><span class="icon-right-arrow"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div> {% endcomment %}
+				{% endfor %}
+                {% comment %} <div class="row">
+                    <div class="col-xl-12">
+                        <div class="portfolio-page__btn-box text-center">
+                            <a href="#" class="thm-btn portfolio-page__btn"><span>Load more work</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+
+        </section>
+{% comment %} <section class="portfolio-one" id="portfolio">
+			<div class="portfolio-one__container">
+				<div class="section-title text-center">
+					
+					<h2 class="section-title__title">Machines Availble in <br> Our laundry<br></h2>
+				</div>
+				
+				<div class="row filter-layout masonary-layout">
+					<div class="col-xl-3 col-lg-6 col-md-6 filter-item bra illus web photo">
+						<!--Portfolio One Single-->
+						<div class="portfolio-one__single wow fadeInUp" data-wow-delay="100ms">
+							<div class="portfolio-one__img">
+							{% for object2 in obj2 %}
+								<img src="{{object2.image.url}}" alt="" height="426" width="370">
+								
+								<div class="portfolio-one__arrow">
+									<span class="icon-right-arrow"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6 col-md-6 filter-item bra photo">
+						<!--Portfolio One Single-->
+						<div class="portfolio-one__single wow fadeInUp" data-wow-delay="200ms">
+							<div class="portfolio-one__img">
+								<img src="{{object2.image2.url}}" alt=""  height="426" width="370">
+								
+								<div class="portfolio-one__arrow">
+									<span class="icon-right-arrow"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6 col-md-6 filter-item bra illus web">
+						<!--Portfolio One Single-->
+						<div class="portfolio-one__single mar-b-0 margin-bottom-30 wow fadeInUp" data-wow-delay="300ms">
+							<div class="portfolio-one__img">
+								<img src="{{object2.image3.url}}" alt=""  height="426" width="370">
+								
+								<div class="portfolio-one__arrow">
+									<span class="icon-right-arrow"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-6 col-md-6 filter-item bra illus photo">
+						<!--Portfolio One Single-->
+						<div class="portfolio-one__single mar-b-0 wow fadeInUp" data-wow-delay="400ms">
+							<div class="portfolio-one__img">
+								<img src="{{object2.image.url}}" alt=""  height="426" width="370">
+								
+								<div class="portfolio-one__arrow">
+									<span class="icon-right-arrow"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>{% endfor %}
+			</div>
+		</section>		 {% endcomment %}
+        <br></br>
+
+{% endblock content %}

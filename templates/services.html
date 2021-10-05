@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'shinelaundry' %}">Home</a></li>
+                        <li><span>.</span></li>
+                        <li>Services</li>
+                    </ul>
+                    <h2>Services</h2>
+                </div>
+            </div>
+        </section>
+
+<link rel="shortcut icon" type="image/png" href="https://www.flaticon.com/free-icons/dry-cleaning
+		">
+				<section class="services-one" id="services">
+					<div class="services-one-bg" style="background-image: url({% static 'assets/images/backgrounds/services-one-bg.jpg' %})">
+					</div>
+					<div class="container">
+						<div class="section-title text-center">
+							<span class="section-title__tagline">Our services list</span>
+							<p>we are a laundry company that focuses more on using machines and less human labour,In our processes of cleaning,we use different electric machine for each different work. </p>
+						</div>
+						<div class="row">
+						{% for object1 in obj1 %}
+							<div class="col-xl-4 col-lg-4">
+							  {% csrf_token %}
+							   {% load staticfiles %}
+								<!--Services One Single-->
+								<div class="services-one__single wow fadeInUp" data-wow-delay="100ms">
+									<div class="services-one__icon">
+										<img src="{{object1.image.url}}" height="92" width="92">
+									</div>
+									<h3 class="services-one__title"><a href="#">{{object1.title}}</a></h3>
+									<p class="services-one__text"> {{object1.info}} </p>
+										
+								</div> 
+
+							</div>
+						{% endfor %}
+							{% comment %} <div class="col-xl-4 col-lg-4">
+								<!--Services One Single-->
+								<div class="services-one__single wow fadeInUp" data-wow-delay="100ms">
+									<div class="services-one__icon">
+										<img src="{% static 'assets/images/drying-machine.png' %}" alt="" height="92" width="92">
+									</div>
+									<h3 class="services-one__title"><a href="web-development.html">DryCleaning</a></h3>
+									<p class="services-one__text">Do you have a high brand Lehenga/Sherwani that needs to be dry cleaned safely?</p>
+								
+								</div> 
+									
+							</div>
+							<div class="col-xl-4 col-lg-4">
+								<!--Services One Single-->
+								<div class="services-one__single wow fadeInUp" data-wow-delay="100ms">
+									<div class="services-one__icon">
+										<img src="{% static 'assets/images/92.jpg' %}" alt="" height="92" width="92">
+									</div>
+									<h3 class="services-one__title"><a href="web-application.html">Ironing</a></h3>
+									<p class="services-one__text">Wanna look smart with the 'Oh so nicely clean and ironed clothes'??</p>
+									
+		
+								</div> 
+							</div> {% endcomment %}
+						</div>
+					</div>
+					<h5><center><ul>If your answer to all the above question is 'yes',<ul>
+						<ul>Shine is ready to make your clothes shine with the best services as above listed</ul>
+					</h5></center>
+				</section>
+
+{% endblock content %}

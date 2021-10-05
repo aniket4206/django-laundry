@@ -1,0 +1,80 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+{% load static %}
+<section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'shinelaundry' %}">Home</a></li>
+                        <li><span>.</span></li>
+                        <li>Vision</li>
+                    </ul>
+                    <h2>Vision</h2>
+                </div>
+            </div>
+        </section>
+
+
+<section class="welcome-one" id="vision">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-5">
+						<div class="welcome-one__left wow fadeInLeft" data-wow-duration="1500ms">
+							<div class="welcome-one__img-box">
+								<div class="welcome-one__img">
+									<img src="{% static 'assets/images/resources/123.jpg' %}" alt=""height="370" width="399">
+								
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-xl-7">
+						<div>
+							The perfect solution is here,<br>
+								One & only “Shine Laundry”<br>
+								Ab Shine laundry se shine karwaiye apne kapde!
+						</div><br><br>
+						<div class="welcome-one__right">
+							<div class="section-title text-left">
+								
+							</div>
+							<div class="welcome-one__solutions">
+								<div class="welcome-one__solutions-single">
+									<div class="welcome-one__solutions-icon">
+										<span class="icon-tick"></span>
+									</div>
+									<div class="welcome-one__solutions-text-box">
+										<p> <span class="mlabel"></span> </p>
+										
+										
+									</div>
+								</div>
+								<div class="welcome-one__solutions-single">
+									<div class="welcome-one__solutions-icon">
+										<span class="icon-tick"></span>
+									</div>
+									<div class="welcome-one__solutions-text-box">
+										<p> <span class="vlabel"></span></p>
+										
+										
+									</div>
+									<!-- <div>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+										Obcaecati molestiae esse, tenetur rem deserunt repudiandae 
+										 atque perferendis soluta excepturi.
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+{% endblock content %}

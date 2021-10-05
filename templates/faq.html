@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+      {% block content %}
+{% load static %}
+<!--FAQs Page Start-->
+<section class="page-header" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+            <div class="page-header-shape-1"></div>
+            <div class="page-header-shape-2"></div>
+            <div class="container">
+                <div class="page-header__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'shinelaundry' %}">Home</a></li>
+                        <li><span>.</span></li>
+                        <li>FAQ's</li>
+                    </ul>
+                    <h2>FAQ's</h2>
+                </div>
+            </div>
+        </section>
+
+    <!--FAQs Page Start-->
+        <section class="faqs-page">
+            <div class="faqs-page-bg" style="background-image: url(assets/images/backgrounds/faqs-page-bg.jpg)"></div>
+            <div class="container">
+            {% for object in obj %}
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="faqs-page__single">
+                            <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                                <div class="accrodion active">
+                                    <div class="accrodion-title">
+                                        <h4>{{object.title}}</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>{{object.desc}}</p>
+                                        </div>
+                                        <!-- /.inner -->
+                                    </div>
+                                </div><br/>
+                                {% comment %} <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>{{object.title}}</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>{{object.desc}}</p>
+                                        </div><!-- /.inner -->
+                                    </div>
+                                </div> {% endcomment %}
+                                {% comment %} <div class="accrodion last-chiled">
+                                    <div class="accrodion-title">
+                                        <h4>{{object.title}}</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>{{object.desc}}</p>
+                                        </div><!-- /.inner -->
+                                    </div>
+                                </div> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="faqs-page__single mar-b-0">
+                            <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                                <div class="accrodion active">
+                                    <div class="accrodion-title">
+                                        <h4>{{object.title1}}</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>{{object.desc1}}</p>
+                                        </div><!-- /.inner -->
+                                    </div>
+                                </div><br />
+                                {% comment %} <div class="accrodion">
+                                    <div class="accrodion-title">
+                                        <h4>Few resons why you should choose us</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum leo
+                                                ligula, vitae commodo nisl.</p>
+                                        </div><!-- /.inner -->
+                                    </div>
+                                </div>
+                                <div class="accrodion last-chiled">
+                                    <div class="accrodion-title">
+                                        <h4>Few resons why you should choose us</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <p>Suspendisse finibus urna mauris, vitae consequat quam vel. Vestibulum leo
+                                                ligula, vitae commodo nisl.</p>
+                                        </div><!-- /.inner -->
+                                    </div>
+                                </div> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>{% endfor %}
+                </div>
+            </div>
+        </section>
+        <!--FAQs Page End-->
+
+        <!--FAQs Contact Start-->
+        <section class="faqs-contact">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="section-title__tagline">Freqeuntly asked questions</span>
+                    <h2 class="section-title__title">Feel free to contact</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="faqs-contact__form">
+                            <form action="assets/inc/sendemail.php" class="comment-one__form contact-form-validated"
+                                novalidate="novalidate">
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Your name" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="email" placeholder="Email Address" name="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Phone number" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="comment-form__input-box">
+                                            <input type="text" placeholder="Subject" name="Subject">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="comment-form__input-box">
+                                            <textarea name="message" placeholder="Write Message"></textarea>
+                                        </div>
+                                        <button type="submit" class="thm-btn faqs-contact__btn"><span>Send a
+                                                message</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FAQs Contact End-->
+
+        
+
+        {% endblock %}
