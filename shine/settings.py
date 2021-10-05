@@ -31,14 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'shinelaundry.apps.ShinelaundryConfig',
+    'admin_interface',
+    'colorfield',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -124,3 +127,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'error4206@gmail.com'
+EMAIL_HOST_PASSWORD = 'Aniket@7499134803'
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
